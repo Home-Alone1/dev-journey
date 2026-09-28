@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
@@ -6,9 +9,9 @@ body{
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
+}  
 .page-home h1{
-    font-size: 2.5rem;
+    font-size: 30px;
     color: purple;
     text-align: center;
     letter-spacing: 1px;
@@ -16,6 +19,7 @@ body{
     text-transform: uppercase;
 }
 .page-about h1{
+    font-size: 18px;
     color: red;
     text-align: center;
     letter-spacing: 1px;
@@ -79,3 +83,25 @@ strong{
     text-transform: capitalize;
 }
 
+@media(min-width: 768px){
+    body{
+        font-size: 16px;
+    }
+    .page-home h1{
+        font-size: 4rem;
+    }
+    .page-about h1{
+        font-size: 4rem;
+    }
+    img{
+        display: inline-flex;
+    }
+}
+@media (max-width:1200px){
+    body{
+        max-width: 900px;
+    }
+    img{
+        display: inline-block;
+    }
+}
