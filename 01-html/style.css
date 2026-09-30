@@ -10,7 +10,7 @@ body{
     margin: 0 auto;
     padding: 20px;
 } 
-.page-home h1{
+.page-home h1 {
     font-size: 30px;
     color: purple;
     text-align: center;
@@ -18,7 +18,7 @@ body{
     line-height: 1.2;
     text-transform: uppercase;
 }
-.page-about h1{
+.page-about h1 {
     font-size: 18px;
     color: red;
     text-align: center;
@@ -26,62 +26,80 @@ body{
     line-height: 1.2;
     text-transform: uppercase;
 }
-h2{
+h2 {
     color: blue;
     border-bottom: 2px solid blue;
     padding-bottom: 5px;
     line-height: 1.3;
     text-transform: capitalize;
 }
-h3{
+h3 {
     color: black;
     text-transform: capitalize;
     font-weight: bolder;
     font-size: 16px;
     line-height: 1.5;
 }
-p{
+p {
     color: black;
     line-height: 1.6;
     text-align: justify;
     text-transform: capitalize;
 }
-a{
+a {
     color: blue;  
     font-weight: bold;
     text-decoration: none;
 }
-a:hover{
+a:hover {
     text-decoration: underline;
     text-decoration-color: rgb(0, 0, 0);
     box-shadow: 2px 4px 10px rgba(17, 0, 0, 0.2);
 }
-img{
+img {
     border-radius: 10px;
     padding: 10px;
     margin: 10px 0;
 }
-img:hover{
+img:hover {
     cursor: pointer;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
-.text{
+.text {
     background-color: #fff3cd;
     color: #333333;
     padding: 2px 6px;
     border-radius: 4px;
     border: 2px groove gray;
 }
-.highlight{
+.highlight {
     color: black;
     text-align: justify;
 }
-strong{
+strong {
     color: darkblue;
     font-weight: bold;
     letter-spacing: normal;
     text-transform: capitalize;
 }
+.skills{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    flex-direction: row;
+}
+.skill{
+    background-color: #333;
+    color: #ffF;
+    padding: 20px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+
 @media(min-width: 768px){
     body{
         font-size: 16px;
@@ -103,25 +121,4 @@ strong{
     img{
         display: inline-block;
     }
-    .skills{
-        flex-direction: row;
-    }
-    .skill{
-        text-align: center;
-    }
-}
-.skills{
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 20px 0;
-    flex-direction: row;
-}
-.skill{
-    background-color: #333;
-    color: #ffF;
-    padding: 20px 30px;
-    border-radius: 8px;
-    font-weight: bold;
 }
