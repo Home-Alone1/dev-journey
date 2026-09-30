@@ -9,7 +9,7 @@ body{
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}  
+} 
 .page-home h1{
     font-size: 30px;
     color: purple;
@@ -82,7 +82,6 @@ strong{
     letter-spacing: normal;
     text-transform: capitalize;
 }
-
 @media(min-width: 768px){
     body{
         font-size: 16px;
@@ -104,4 +103,25 @@ strong{
     img{
         display: inline-block;
     }
+    .skills{
+        flex-direction: row;
+    }
+    .skill{
+        text-align: center;
+    }
+}
+.skills{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    flex-direction: row;
+}
+.skill{
+    background-color: #333;
+    color: #ffF;
+    padding: 20px 30px;
+    border-radius: 8px;
+    font-weight: bold;
 }
