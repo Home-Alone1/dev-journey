@@ -26,6 +26,9 @@ body{
     line-height: 1.2;
     text-transform: uppercase;
 }
+.page-skill {
+    color: red;
+}
 h2 {
     color: blue;
     border-bottom: 2px solid blue;
@@ -34,11 +37,12 @@ h2 {
     text-transform: capitalize;
 }
 h3 {
-    color: black;
+    color: #fff;
     text-transform: capitalize;
     font-weight: bolder;
     font-size: 16px;
     line-height: 1.5;
+    text-align: center;
 }
 p {
     color: black;
@@ -55,6 +59,8 @@ a:hover {
     text-decoration: underline;
     text-decoration-color: rgb(0, 0, 0);
     box-shadow: 2px 4px 10px rgba(17, 0, 0, 0.2);
+    display: inline-block;
+    border-radius: 20px 30px;
 }
 img {
     border-radius: 10px;
@@ -92,11 +98,115 @@ strong {
 }
 .skill{
     background-color: #333;
-    color: #ffF;
+    color: #fff;
     padding: 20px 30px;
     border-radius: 8px;
     font-weight: bold;
+    box-shadow: 2px 4px 10px rgba(17, 0, 0, 0.2);
 }
+.important {
+    display: inline-flex;
+    background-color: black;
+    gap: 20px;
+    justify-content: flex-end;
+    border-radius: 20px 20px;
+    flex-direction: column;
+}
+.navbar {
+    background: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+   
+}
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.links a {
+    font-size: 13px;
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 3px;
+    background-color: red;
+    border-radius: 10px 20px ;
+}
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+.card {
+    flex: 1 1 250px;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.grid-text {
+    flex-direction: row;
+    color: white;
+    background-color: black;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.page-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "heeader header"
+    "nav    main"
+    "footer footer";
+    gap: 15px;
+    min-height: 100vh;
+    margin: 0;
+}
+.page-header {
+    grid-area: header;
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+.page-nav {
+    grid-area: nav;
+    background: #2c7bc4;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+.page-main {
+    grid-area: main;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.page-sidebar {
+    grid-area: sidebar;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+.page-footer {
+    grid-area: footer;
+    background: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+
+
 
 
 
