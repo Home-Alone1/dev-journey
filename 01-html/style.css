@@ -1,10 +1,16 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    --bg-color: #f4f4f4;
+    --primary-color: blue;
+    --text-color: #333;
+    --font-base: 16px;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    color: #333333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
@@ -12,7 +18,7 @@ body{
 } 
 .page-home h1 {
     font-size: 30px;
-    color: purple;
+    color: var(--text-color);
     text-align: center;
     letter-spacing: 1px;
     line-height: 1.2;
@@ -54,6 +60,7 @@ a {
     color: blue;  
     font-weight: bold;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 a:hover {
     text-decoration: underline;
@@ -61,15 +68,18 @@ a:hover {
     box-shadow: 2px 4px 10px rgba(17, 0, 0, 0.2);
     display: inline-block;
     border-radius: 20px 30px;
+    transform: scale(0.9);
 }
 img {
     border-radius: 10px;
     padding: 10px;
     margin: 10px 0;
+    transition: all 0.3s ease;
 }
 img:hover {
     cursor: pointer;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 .text {
     background-color: #fff3cd;
@@ -81,6 +91,7 @@ img:hover {
 .highlight {
     color: black;
     text-align: justify;
+    font-size: var(--font-base);
 }
 strong {
     color: darkblue;
@@ -102,7 +113,12 @@ strong {
     padding: 20px 30px;
     border-radius: 8px;
     font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 2px 4px 10px rgba(17, 0, 0, 0.2);
+}
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 .important {
     display: inline-flex;
@@ -118,12 +134,12 @@ strong {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-   
 }
 .logo {
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
+    animation: float 2s ease-in-out infinite;
 }
 .links a {
     font-size: 13px;
@@ -132,7 +148,7 @@ strong {
     text-decoration: none;
     padding: 3px;
     background-color: red;
-    border-radius: 10px 20px ;
+    border-radius: 10px 20px;
 }
 .cards {
     display: flex;
@@ -147,6 +163,12 @@ strong {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform  0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 .grid-text {
     flex-direction: row;
@@ -161,7 +183,7 @@ strong {
     grid-template-columns: 200px 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-    "heeader header"
+    "header header"
     "nav    main"
     "footer footer";
     gap: 15px;
@@ -232,3 +254,36 @@ strong {
         display: inline-block;
     }
 }
+@media (prefers-color-scheme: dark){
+    :root {
+        --bg-color: #1a1a1a;
+        --primary-color: #60a5fa;
+        --text-color: #f4f4f4;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    *{
+        animation: none !important;
+        transition: none!important;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
